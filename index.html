@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>@PatridgeDev Twitter archive</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="flex-wrap">
+      <div class="flex-cols">
+        <img width="128" height="128" style="margin-right:2em" src="PatridgeDev/avatar/PatridgeDev-TwitterProfilePic.jpeg" />
+        <h1>Welcome to the @PatridgeDev Twitter archive</h1>
+      </div>
+      <p>Archive of my tweets as @PatridgeDev, an account I have since stopped using and deleted before moving entirely to Mastodon. This does not include replies to other people in this archive, so this is just "standalone" tweets and threads.
+</p>
+      <!-- Generated Sun, 24 Nov 2024 22:25:29 GMT -->
+      <div class="tweet">
+        <p id="tabs">
+          <button class="tab active" id="search-tab" onclick="searchTab()">Search</button><button class="tab" id="browse-tab" onclick="browseTab()">Browse</button>
+        </p>
+        <hr class="hr">
+        <p id="loading">Loading search...</p>
+        <div id="search" hidden>
+          <input id="search-input" type="search" />
+          <div id="sorting">Sort by: <button class="sort-button" onclick="sortResults('most-relevant')">most relevant</button> | <button class="sort-button" onclick="sortResults('oldest-first')">oldest first</button> | <button class="sort-button" onclick="sortResults('newest-first')">newest first</button> | <button class="sort-button" onclick="sortResults('most-popular')">most popular</button></div>
+          <div id="output"></div>
+        </div>
+        <div id="browse" hidden>
+          <div id="browse-sort">Sort by: <button class="sort-button-browse" onclick="sortResults('oldest-first-browse')">oldest first</button> | <button class="sort-button-browse" onclick="sortResults('newest-first-browse')">newest first</button> | <button class="sort-button" onclick="sortResults('most-popular-browse')">most popular</button></div>
+          <p id="paging">Page <input id="page-num" type="number" /> of <span id="page-total">...</span> </p>
+          <div id="browse-output"></div>
+        </div>
+      </div>
+      <p>This site was made with <a href="https://tinysubversions.com/twitter-archive/make-your-own/">this Twitter archiving tool</a> (via <a href="https://github.com/mcclure/twitter-archiver/tree/cmdline-only">this</a> fork).</p>
+    </div>
+  </div>
+</body>
+<script src="searchDocuments.js"></script>
+<script src="flexsearch.bundle.js"></script>
+<script src="app.js"></script>
+</html>
